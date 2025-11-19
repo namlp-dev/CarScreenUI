@@ -1,0 +1,8 @@
+module CarScreenUI
+typeinfo appCarScreenUI.qmltypes
+prefer :/qt/qml/CarScreenUI/
+Main 1.0 Main.qml
+ClimateControl 1.0 ClimateControl.qml
+Dashboard 1.0 Dashboard.qml
+MediaPlayer 1.0 MediaPlayer.qml
+

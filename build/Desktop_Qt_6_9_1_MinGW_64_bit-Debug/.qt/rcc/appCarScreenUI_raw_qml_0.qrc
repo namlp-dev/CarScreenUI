@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/qt/qml/CarScreenUI/">
+    <file alias="Main.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/Main.qml</file>
+    <file alias="ClimateControl.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/ClimateControl.qml</file>
+    <file alias="Dashboard.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/Dashboard.qml</file>
+    <file alias="MediaPlayer.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/MediaPlayer.qml</file>
+  </qresource>
+</RCC>
+
