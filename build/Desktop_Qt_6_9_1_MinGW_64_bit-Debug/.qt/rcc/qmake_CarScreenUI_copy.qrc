@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/CarScreenUI">
+    <file alias="qmldir">C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CarScreenUI/qmldir</file>
+  </qresource>
+</RCC>
+

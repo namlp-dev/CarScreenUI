@@ -4,615 +4,87 @@
             {
                 "entries": [
                     {
-                        "codegenSuccessful": false,
-                        "column": 12,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"color\".",
-                        "functionName": "color",
-                        "line": 15
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 271,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 16
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 162,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 19
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 50,
-                        "durationMicroseconds": 52,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 21
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 50,
-                        "durationMicroseconds": 31,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 22
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 50,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 23
+                        "line": 25
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 12,
-                        "durationMicroseconds": 166,
+                        "column": 39,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
-                        "functionName": "x",
-                        "line": 29
+                        "functionName": "centerIn",
+                        "line": 54
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 12,
-                        "durationMicroseconds": 73,
+                        "column": 35,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
-                        "functionName": "y",
-                        "line": 30
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 16,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 34
+                        "functionName": "left",
+                        "line": 65
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 47,
+                        "column": 45,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
-                        "functionName": "loops",
-                        "line": 38
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 40,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 39
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 34,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 40
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 33,
-                        "errorMessage": "",
-                        "functionName": "loops",
-                        "line": 45
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 46
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 37,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 47
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 12,
-                        "durationMicroseconds": 104,
-                        "errorMessage": "",
-                        "functionName": "x",
-                        "line": 57
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 12,
-                        "durationMicroseconds": 100,
-                        "errorMessage": "",
-                        "functionName": "y",
-                        "line": 58
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 16,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 62
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 33,
-                        "errorMessage": "",
-                        "functionName": "loops",
-                        "line": 66
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "",
-                        "functionName": "type",
+                        "functionName": "verticalCenter",
                         "line": 67
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 35,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 68
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 45,
+                        "column": 28,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "loops",
-                        "line": 73
+                        "line": 79
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 27,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 74
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 69,
-                        "durationMicroseconds": 38,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 75
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 85
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 23,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 93
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 32,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 99
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 105
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 23,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 111
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 142
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"pressed\".",
-                        "functionName": "onPressed",
-                        "line": 148
-                    },
-                    {
-                        "codegenSuccessful": false,
                         "column": 33,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"released\".",
-                        "functionName": "onReleased",
-                        "line": 149
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 20,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 124
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 39,
-                        "durationMicroseconds": 18,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 125
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 43,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "centerIn",
-                        "line": 132
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 15,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "text",
-                        "line": 135
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 136
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 53,
-                        "durationMicroseconds": 9,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "verticalCenter",
-                        "line": 138
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 156
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 82
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 32,
-                        "durationMicroseconds": 58,
+                        "column": 38,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
-                        "functionName": "loops",
-                        "line": 160
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 168
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 21,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 175
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 25,
-                        "durationMicroseconds": 39,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "source",
-                        "line": 190
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 57,
-                        "errorMessage": "Type (component in C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/Main.qml)::item with type QObject does not have a property isDarkMode for writing",
-                        "functionName": "onLoaded",
-                        "line": 200
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 34,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 189
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 21,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 212
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 18,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "color",
-                        "line": 213
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 219
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 14,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "isActive",
-                        "line": 228
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "isDark",
-                        "line": 229
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 231
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "isActive",
-                        "line": 238
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "isDark",
-                        "line": 239
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 241
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "isActive",
-                        "line": 248
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "isDark",
-                        "line": 249
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 251
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "isActive",
-                        "line": 258
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 15,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "isDark",
-                        "line": 259
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 261
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 13,
-                        "errorMessage": "Cannot access value for name activeView",
-                        "functionName": "isActive",
-                        "line": 268
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 29,
-                        "durationMicroseconds": 35,
-                        "errorMessage": "Cannot access value for name isDarkMode",
-                        "functionName": "isDark",
-                        "line": 269
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 271
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"pressed\".",
-                        "functionName": "onPressed",
-                        "line": 316
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 21,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"released\".",
-                        "functionName": "onReleased",
-                        "line": 317
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 20,
-                        "durationMicroseconds": 63,
-                        "errorMessage": "Cannot access value for name isActive",
-                        "functionName": "color",
-                        "line": 285
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name isActive",
-                        "functionName": "color",
-                        "line": 286
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 27,
-                        "durationMicroseconds": 16,
-                        "errorMessage": "Cannot access value for name isActive",
-                        "functionName": "width",
-                        "line": 287
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 5,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "centerIn",
-                        "line": 293
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 23,
-                        "durationMicroseconds": 8,
-                        "errorMessage": "Cannot access value for name icon",
-                        "functionName": "text",
-                        "line": 296
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 35,
-                        "errorMessage": "Cannot access value for name isActive",
-                        "functionName": "color",
-                        "line": 298
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 43,
-                        "durationMicroseconds": 7,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "horizontalCenter",
-                        "line": 299
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 23,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name navBtn",
-                        "functionName": "text",
-                        "line": 303
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 24,
-                        "durationMicroseconds": 28,
-                        "errorMessage": "Cannot access value for name isActive",
-                        "functionName": "color",
-                        "line": 305
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 43,
-                        "durationMicroseconds": 5,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "horizontalCenter",
-                        "line": 306
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 59,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "Cannot access value for name Easing",
                         "functionName": "type",
-                        "line": 313
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 90
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 38,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 95
                     }
                 ],
-                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/Main.qml"
+                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/Main.qml"
             }
         ],
         "moduleId": "CarScreenUI(appCarScreenUI)"

@@ -16,9 +16,10 @@
 #endif
 Q_QMLTYPE_EXPORT void qml_register_types_CarScreenUI()
 {
+    qmlRegisterModule("CarScreenUI", 254, 0);
     QT_WARNING_PUSH QT_WARNING_DISABLE_DEPRECATED
     QT_WARNING_POP
-    qmlRegisterModule("CarScreenUI", 1, 0);
+    qmlRegisterModule("CarScreenUI", 254, 254);
 }
 
 static const QQmlModuleRegistration carScreenUIRegistration("CarScreenUI", qml_register_types_CarScreenUI);

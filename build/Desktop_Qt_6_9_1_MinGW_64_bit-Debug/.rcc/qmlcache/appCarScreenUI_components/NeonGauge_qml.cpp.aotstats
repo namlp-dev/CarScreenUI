@@ -1,0 +1,188 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 299,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 126,
+                        "errorMessage": "",
+                        "functionName": "capStyle",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 240,
+                        "errorMessage": "",
+                        "functionName": "centerX",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "centerY",
+                        "line": 33
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 215,
+                        "errorMessage": "",
+                        "functionName": "radiusX",
+                        "line": 34
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 217,
+                        "errorMessage": "",
+                        "functionName": "radiusY",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 44
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 70,
+                        "errorMessage": "Cannot access value for name root",
+                        "functionName": "shadowColor",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 154,
+                        "errorMessage": "",
+                        "functionName": "strokeColor",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "capStyle",
+                        "line": 56
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 171,
+                        "errorMessage": "",
+                        "functionName": "centerX",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "",
+                        "functionName": "centerY",
+                        "line": 60
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 193,
+                        "errorMessage": "",
+                        "functionName": "radiusX",
+                        "line": 61
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 189,
+                        "errorMessage": "",
+                        "functionName": "radiusY",
+                        "line": 62
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 206,
+                        "errorMessage": "",
+                        "functionName": "sweepAngle",
+                        "line": 64
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 15,
+                        "durationMicroseconds": 232,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "",
+                        "functionName": "style",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "",
+                        "functionName": "styleColor",
+                        "line": 76
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 70
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 15,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 83
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 80
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 81
+                    }
+                ],
+                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/components/NeonGauge.qml"
+            }
+        ],
+        "moduleId": "CarScreenUI(appCarScreenUI)"
+    }
+]

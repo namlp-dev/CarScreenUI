@@ -615,6 +615,21 @@ appCarScreenUI_autogen/timestamp: \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickControls2Private/Qt6QuickControls2PrivateDependencies.cmake \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickControls2Private/Qt6QuickControls2PrivateTargets.cmake \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickControls2Private/Qt6QuickControls2PrivateVersionlessAliasTargets.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfig.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfigVersion.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsConfigVersionImpl.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsDependencies.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsTargets-relwithdebinfo.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsTargets.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffects/Qt6QuickEffectsVersionlessAliasTargets.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateAdditionalTargetInfo.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfig.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfigVersion.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateConfigVersionImpl.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateDependencies.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateTargets.cmake \
+	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickEffectsPrivate/Qt6QuickEffectsPrivateVersionlessAliasTargets.cmake \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateAdditionalTargetInfo.cmake \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateConfig.cmake \
 	C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6QuickPrivate/Qt6QuickPrivateConfigVersion.cmake \
@@ -683,12 +698,12 @@ appCarScreenUI_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/CMakeLists.txt \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/qml_imports/appCarScreenUI_conf.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
-	C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/main.cpp \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/CMakeLists.txt \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/qml_imports/appCarScreenUI_conf.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/main.cpp \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe
