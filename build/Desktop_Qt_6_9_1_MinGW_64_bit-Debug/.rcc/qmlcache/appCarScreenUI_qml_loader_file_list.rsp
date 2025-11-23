@@ -1,8 +1,12 @@
 --resource
-C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/qmake_CarScreenUI.qrc
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/qmake_CarScreenUI.qrc
 --resource
-C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appCarScreenUI_raw_qml_0.qrc
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appCarScreenUI_raw_qml_0.qrc
+--resource
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appCarScreenUI_raw_qml_0_extra_qmldirs.qrc
 /qt/qml/CarScreenUI/Main.qml
-/qt/qml/CarScreenUI/ClimateControl.qml
-/qt/qml/CarScreenUI/Dashboard.qml
-/qt/qml/CarScreenUI/MediaPlayer.qml
+/qt/qml/CarScreenUI/components/NeonButton.qml
+/qt/qml/CarScreenUI/components/NeonGauge.qml
+/qt/qml/CarScreenUI/components/TopBar.qml
+/qt/qml/CarScreenUI/components/SideMenu.qml
+/qt/qml/CarScreenUI/components/BottomBar.qml
