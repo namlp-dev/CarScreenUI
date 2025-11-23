@@ -12,21 +12,35 @@ namespace _qt_qml_CarScreenUI_Main_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_CarScreenUI_ClimateControl_qml { 
+namespace _qt_qml_CarScreenUI_components_NeonButton_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_CarScreenUI_Dashboard_qml { 
+namespace _qt_qml_CarScreenUI_components_NeonGauge_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_CarScreenUI_MediaPlayer_qml { 
+namespace _qt_qml_CarScreenUI_components_TopBar_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_CarScreenUI_components_SideMenu_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_CarScreenUI_components_BottomBar_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -48,9 +62,11 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_Main_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/ClimateControl.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_ClimateControl_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/Dashboard.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_Dashboard_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/MediaPlayer.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_MediaPlayer_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/components/NeonButton.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_components_NeonButton_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/components/NeonGauge.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_components_NeonGauge_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/components/TopBar.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_components_TopBar_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/components/SideMenu.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_components_SideMenu_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/CarScreenUI/components/BottomBar.qml"), &QmlCacheGeneratedCode::_qt_qml_CarScreenUI_components_BottomBar_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;
