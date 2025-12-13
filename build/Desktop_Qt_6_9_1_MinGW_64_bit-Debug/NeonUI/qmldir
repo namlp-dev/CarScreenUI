@@ -1,0 +1,11 @@
+module NeonUI
+typeinfo appNeonCarInfotainment.qmltypes
+prefer :/qt/qml/NeonUI/
+Main 1.0 content/Main.qml
+NavBar 1.0 content/NavBar.qml
+TopBar 1.0 content/TopBar.qml
+DashboardScreen 1.0 content/DashboardScreen.qml
+ClimateScreen 1.0 content/ClimateScreen.qml
+MediaScreen 1.0 content/MediaScreen.qml
+NeonGauge 1.0 content/NeonGauge.qml
+

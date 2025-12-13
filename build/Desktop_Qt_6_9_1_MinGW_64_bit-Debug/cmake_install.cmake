@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI
+# Install script for directory: C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/CarScreenUI")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/NeonCarInfotainment")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,11 +38,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/appCarScreenUI.exe")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appCarScreenUI.exe" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appCarScreenUI.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/appNeonCarInfotainment.exe")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appNeonCarInfotainment.exe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appNeonCarInfotainment.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/Qt/Tools/mingw1310_64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appCarScreenUI.exe")
+      execute_process(COMMAND "C:/Qt/Tools/mingw1310_64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appNeonCarInfotainment.exe")
     endif()
   endif()
 endif()
@@ -62,6 +62,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/ADMIN/Desktop/CRANES/1st_yr/qtCarUI/CarScreenUI/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

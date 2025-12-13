@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/qt/qml/NeonUI/">
+    <file alias="content/Main.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/Main.qml</file>
+    <file alias="content/NavBar.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/NavBar.qml</file>
+    <file alias="content/TopBar.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/TopBar.qml</file>
+    <file alias="content/DashboardScreen.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/DashboardScreen.qml</file>
+    <file alias="content/ClimateScreen.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/ClimateScreen.qml</file>
+    <file alias="content/MediaScreen.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/MediaScreen.qml</file>
+    <file alias="content/NeonGauge.qml">C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/NeonGauge.qml</file>
+  </qresource>
+</RCC>
+

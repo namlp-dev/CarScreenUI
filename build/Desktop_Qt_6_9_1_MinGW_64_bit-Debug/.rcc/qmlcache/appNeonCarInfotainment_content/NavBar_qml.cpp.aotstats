@@ -1,0 +1,148 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 174,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "",
+                        "functionName": "model",
+                        "line": 43
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 43,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "Cannot access value for name index",
+                        "functionName": "isSelected",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "color",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 29,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 52
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "color",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 12,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "enabled",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "fillColor",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 17,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "path",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 170,
+                        "errorMessage": "Cannot access value for name root",
+                        "functionName": "onClicked",
+                        "line": 93
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 31,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 92
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 41,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "",
+                        "functionName": "orientation",
+                        "line": 111
+                    }
+                ],
+                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/NavBar.qml"
+            }
+        ],
+        "moduleId": "NeonUI(appNeonCarInfotainment)"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 69,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 4
+                    }
+                ],
+                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/ClimateScreen.qml"
+            }
+        ],
+        "moduleId": "NeonUI(appNeonCarInfotainment)"
+    }
+]

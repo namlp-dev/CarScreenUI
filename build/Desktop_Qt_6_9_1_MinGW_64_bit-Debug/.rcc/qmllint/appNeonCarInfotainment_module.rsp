@@ -1,0 +1,12 @@
+-I
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug
+-I
+C:/Qt/6.9.1/mingw_64/qml
+--resource
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/qmake_NeonUI.qrc
+--resource
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appNeonCarInfotainment_raw_qml_0.qrc
+--resource
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appNeonCarInfotainment_raw_qml_0_extra_qmldirs.qrc
+--module
+NeonUI

@@ -1,0 +1,196 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 150,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 202,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method darker, returning QVariant -> QColor stored as QVariant",
+                        "functionName": "strokeColor",
+                        "line": 19
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "capStyle",
+                        "line": 22
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "",
+                        "functionName": "centerX",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 51,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "centerY",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 26,
+                        "durationMicroseconds": 93,
+                        "errorMessage": "",
+                        "functionName": "radiusX",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 58,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "",
+                        "functionName": "radiusY",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 25,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "Cannot access value for name root",
+                        "functionName": "shadowColor",
+                        "line": 39
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 26,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "strokeColor",
+                        "line": 47
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 32,
+                        "errorMessage": "",
+                        "functionName": "capStyle",
+                        "line": 50
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "centerX",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 55,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "centerY",
+                        "line": 53
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 93,
+                        "errorMessage": "",
+                        "functionName": "radiusX",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 62,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "radiusY",
+                        "line": 54
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 114,
+                        "errorMessage": "",
+                        "functionName": "sweepAngle",
+                        "line": 57
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 65
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 68
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 70,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 73
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 30,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name root",
+                        "functionName": "shadowColor",
+                        "line": 79
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 35,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 89
+                    }
+                ],
+                "filePath": "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/content/NeonGauge.qml"
+            }
+        ],
+        "moduleId": "NeonUI(appNeonCarInfotainment)"
+    }
+]

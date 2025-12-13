@@ -1,45 +1,48 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(CarScreenUI VERSION 0.1 LANGUAGES CXX)
+project(NeonCarInfotainment VERSION 0.1 LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2 QuickEffects)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Quick QuickControls2)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(appCarScreenUI
+qt_add_executable(appNeonCarInfotainment
     main.cpp
 )
 
-qt_add_qml_module(appCarScreenUI
-    URI CarScreenUI
+qt_add_qml_module(appNeonCarInfotainment
+    URI "NeonUI"
+    VERSION 1.0
     QML_FILES
-        Main.qml
-        components/NeonButton.qml
-        components/NeonGauge.qml
-        components/TopBar.qml
-        components/SideMenu.qml
-        components/BottomBar.qml
+        content/Main.qml
+        content/NavBar.qml
+        content/TopBar.qml
+        content/DashboardScreen.qml
+        content/ClimateScreen.qml
+        content/MediaScreen.qml
+        QML_FILES content/NeonGauge.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
-set_target_properties(appCarScreenUI PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appCarScreenUI
+set_target_properties(appNeonCarInfotainment PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appNeonCarInfotainment
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appCarScreenUI
-    PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::QuickEffects
+target_link_libraries(appNeonCarInfotainment
+    PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::Widgets
 )
 
 include(GNUInstallDirs)
-install(TARGETS appCarScreenUI
+install(TARGETS appNeonCarInfotainment
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

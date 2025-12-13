@@ -1,0 +1,15 @@
+-rootPath
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment
+-cmake-output
+-output-file
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/qml_imports/appNeonCarInfotainment_conf.cmake
+-importPath
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/NeonUI
+-importPath
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.9.1/mingw_64/qml
+-qrcFiles
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/qmake_NeonUI.qrc
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appNeonCarInfotainment_raw_qml_0.qrc
+C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qt/rcc/appNeonCarInfotainment_raw_qml_0_extra_qmldirs.qrc
