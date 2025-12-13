@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 364,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 17
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 202,
+                        "durationMicroseconds": 392,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method darker, returning QVariant -> QColor stored as QVariant",
                         "functionName": "strokeColor",
                         "line": 19
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "capStyle",
                         "line": 22
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 209,
                         "errorMessage": "",
                         "functionName": "centerX",
                         "line": 25
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 179,
                         "errorMessage": "",
                         "functionName": "centerY",
                         "line": 25
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 224,
                         "errorMessage": "",
                         "functionName": "radiusX",
                         "line": 26
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 58,
-                        "durationMicroseconds": 83,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "radiusY",
                         "line": 26
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 35
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 26,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "shadowColor",
                         "line": 39
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 45
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "strokeColor",
                         "line": 47
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 102,
                         "errorMessage": "",
                         "functionName": "capStyle",
                         "line": 50
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 174,
                         "errorMessage": "",
                         "functionName": "centerX",
                         "line": 53
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 55,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "centerY",
                         "line": 53
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 196,
                         "errorMessage": "",
                         "functionName": "radiusX",
                         "line": 54
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 62,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 207,
                         "errorMessage": "",
                         "functionName": "radiusY",
                         "line": 54
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "sweepAngle",
                         "line": 57
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 208,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 65
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 199,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 68
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 151,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 73
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "shadowColor",
                         "line": 79
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 85
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 130,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 89

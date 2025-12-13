@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-48118c55210d17f6b62e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "NeonCarInfotainment",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-1713c9fdc5686fb9cc2d.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-857c9ba133d008575c0e.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-f6abaaf03ff88e2a56a2.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-ddc310c69d64687bfdd7.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-09f8e3747614d1a10ad9.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment-Debug-8acfefc5603216330dc2.json",
+					"name" : "appNeonCarInfotainment",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_autogen-Debug-74c5851e6df3d39796d5.json",
+					"name" : "appNeonCarInfotainment_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_autogen_timestamp_deps-Debug-fccffa29e6409b0acc38.json",
+					"name" : "appNeonCarInfotainment_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_copy_qml-Debug-0cea4d27a11b0d86039a.json",
+					"name" : "appNeonCarInfotainment_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_copy_res-Debug-52b9631dc4871ecdf5f2.json",
+					"name" : "appNeonCarInfotainment_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_qmlimportscan-Debug-12cc9ad2e258979828f5.json",
+					"name" : "appNeonCarInfotainment_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_qmllint-Debug-4d3eaaec19e212cac797.json",
+					"name" : "appNeonCarInfotainment_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_qmllint_json-Debug-b6ccafd66501fe499204.json",
+					"name" : "appNeonCarInfotainment_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_qmllint_module-Debug-bf84efe4738f71f04f11.json",
+					"name" : "appNeonCarInfotainment_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appNeonCarInfotainment_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appNeonCarInfotainment_qmltyperegistration-Debug-31d2b820c96d5b686f45.json",
+					"name" : "appNeonCarInfotainment_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appNeonCarInfotainment_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appNeonCarInfotainment_aotstats_target-Debug-fad64dce8ebb9f99a977.json",
+					"name" : "module_appNeonCarInfotainment_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/ADMIN/Desktop/CRANES/1st_yr/Qt/NeonCarInfotainment"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

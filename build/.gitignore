@@ -1,0 +1,58 @@
+# --- C++ Objects & Libs ---
+*.slo
+*.lo
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.app
+
+# --- Qt Creator / QMake Specific ---
+# File cấu hình user (chứa đường dẫn tuyệt đối, KHÔNG ĐƯỢC up lên git)
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+.qmake.cache
+Makefile*
+
+# --- CMake Specific (Nếu dùng CMake) ---
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CMakeUserPresets.json
+
+# --- Qt Generated Files (MOC, UI, RCC) ---
+# Các file này được sinh ra tự động khi build, không cần lưu trữ
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*.moc
+
+# --- Build Directories ---
+# Thư mục build mặc định của Qt Creator thường có dạng build-ProjectName-...
+build/
+build-*/
+Debug/
+Release/
+x64/
+x86/
+bin/
+
+# --- Temporary / Autosave Files ---
+*~
+*.autosave
+*.bak
+*.tmp
+.DS_Store
+thumbs.db

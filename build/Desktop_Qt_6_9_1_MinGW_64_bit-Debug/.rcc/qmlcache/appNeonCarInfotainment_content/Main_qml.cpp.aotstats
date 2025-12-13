@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 146,
+                        "durationMicroseconds": 301,
                         "errorMessage": "Cannot retrieve a non-object type by ID: contentStack",
                         "functionName": "onPageSelected",
                         "line": 22
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "onPageSelected",
                         "line": 22
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 244,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 17
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 18
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 19
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 36
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 37
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 38
