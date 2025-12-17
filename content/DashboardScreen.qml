@@ -3,35 +3,38 @@ import QtQuick.Controls
 import QtQuick.Shapes
 import QtQuick.Effects
 import QtQuick.Layouts
+import NeonBackend 1.0 // [QUAN TRỌNG]
 
 Item {
     id: root
 
-    // --- DỮ LIỆU MÔ PHỎNG (BACKEND DATA) ---
-    property real currentSpeed: 0
-    property string currentGear: "D" // P, R, N, D
-    property int batteryLevel: 78 // %
-    property int rangeKm: 340 // km
-    property bool turnLeft: false
-    property bool turnRight: false
+    property real currentSpeed: VehicleData.speed
+    property string currentGear: VehicleData.gear
+    property int batteryLevel: VehicleData.battery
+    property bool turnLeft: VehicleData.leftSignal
+    property bool turnRight: VehicleData.rightSignal
 
-    // Dữ liệu lốp
-    property real pressureFL: 32.0
-    property real pressureFR: 28.5 // Cảnh báo
-    property real pressureRL: 32.0
-    property real pressureRR: 31.5
+    property bool blinkState: false // Biến này sẽ bật/tắt liên tục
 
-    property real inspectOpacity: 0 // Biến điều khiển chuyển cảnh
-
-    // Animation giả lập
-    SequentialAnimation {
-        running: true; loops: Animation.Infinite
-        NumberAnimation { target: root; property: "currentSpeed"; from: 0; to: 124; duration: 8000; easing.type: Easing.InOutQuad }
-        NumberAnimation { target: root; property: "currentSpeed"; from: 124; to: 0; duration: 4000; easing.type: Easing.OutQuad }
+    Timer {
+        interval: 500 // Nháy mỗi 0.5 giây
+        running: root.turnLeft || root.turnRight // Chạy khi có ít nhất 1 bên bật
+        repeat: true
+        onTriggered: root.blinkState = !root.blinkState
+        // Khi tắt xi nhan, reset blink về false
+        onRunningChanged: if (!running) root.blinkState = false
     }
 
-    // Animation giả lập xi nhan
-    Timer { interval: 800; running: true; repeat: true; onTriggered: root.turnLeft = !root.turnLeft }
+    property real pressureFL: VehicleData.tireFL
+    property real pressureFR: VehicleData.tireFR
+    property real pressureRL: VehicleData.tireRL
+    property real pressureRR: VehicleData.tireRR
+
+    // [QUAN TRỌNG] XÓA BỎ CÁC ĐOẠN "SequentialAnimation" VÀ "Timer" GIẢ LẬP CŨ ĐI
+    // (Xóa đoạn Animation speed từ 0 -> 124)
+    // (Xóa Timer nháy xi nhan tự động)
+
+    property real inspectOpacity: 0
 
     // --- 1. KHU VỰC TRUNG TÂM (DRIVE MODE) ---
     Item {
@@ -56,14 +59,6 @@ Item {
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 120 // Dời xuống dưới
             spacing: 5
-
-            Text {
-                text: "RANGE " + root.rangeKm + " KM"
-                color: "#AAAAAA"
-                font.pixelSize: 16
-                font.bold: true
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
 
             // Thanh Pin đơn giản
             Rectangle {
@@ -107,21 +102,54 @@ Item {
         }
 
         // D. Xi nhan (Turn Signals)
-        Text {
-            text: "◀"
-            font.pixelSize: 40
-            color: root.turnLeft ? "#00FF00" : "#222"
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.topMargin: 100
+
+        Item {
+            x: 30; y: 50 // Vị trí tùy chỉnh góc trái trên
+            width: 60; height: 60
+
+            // Chỉ hiện khi bật xi nhan VÀ đang ở nhịp sáng (blinkState)
+            opacity: (root.turnLeft && root.blinkState) ? 1.0 : 0.1
+            Behavior on opacity { NumberAnimation { duration: 100 } } // Hiệu ứng fade nhanh
+
+            // Vẽ mũi tên trái
+            Shape {
+                anchors.centerIn: parent
+                ShapePath {
+                    fillColor: "#00FF00" // Màu xanh lá chuẩn xi nhan
+                    strokeWidth: 0
+                    startX: 40; startY: 0
+                    PathLine { x: 40; y: 40 }
+                    PathLine { x: 0; y: 20 }
+                    PathLine { x: 40; y: 0 }
+                }
+            }
+            // Glow cho mũi tên
+            layer.enabled: opacity > 0.5
+            layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "#00FF00"; shadowBlur: 1.0 }
         }
-        Text {
-            text: "▶"
-            font.pixelSize: 40
-            color: root.turnRight ? "#00FF00" : "#222" // Giả lập chưa bật phải
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.topMargin: 100
+
+        // --- HIỂN THỊ XI NHAN PHẢI ---
+        Item {
+            x: parent.width - 90; y: 50 // Vị trí góc phải trên
+            width: 60; height: 60
+
+            opacity: (root.turnRight && root.blinkState) ? 1.0 : 0.1
+            Behavior on opacity { NumberAnimation { duration: 100 } }
+
+            // Vẽ mũi tên phải
+            Shape {
+                anchors.centerIn: parent
+                ShapePath {
+                    fillColor: "#00FF00"
+                    strokeWidth: 0
+                    startX: 0; startY: 0
+                    PathLine { x: 0; y: 40 }
+                    PathLine { x: 40; y: 20 }
+                    PathLine { x: 0; y: 0 }
+                }
+            }
+            layer.enabled: opacity > 0.5
+            layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "#00FF00"; shadowBlur: 1.0 }
         }
     }
 
