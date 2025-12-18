@@ -5,12 +5,17 @@ project(NeonCarInfotainment VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Quick QuickControls2)
+find_package(Qt6 REQUIRED COMPONENTS Core Multimedia Quick QuickControls2)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(appNeonCarInfotainment
     main.cpp
+    src/FileScanner.h
+    src/FileScanner.cpp
+    src/VehicleData.h
+    src/VehicleData.cpp
+
 )
 
 qt_add_qml_module(appNeonCarInfotainment
@@ -23,7 +28,10 @@ qt_add_qml_module(appNeonCarInfotainment
         content/DashboardScreen.qml
         content/ClimateScreen.qml
         content/MediaScreen.qml
-        QML_FILES content/NeonGauge.qml
+        content/NeonGauge.qml
+        content/NeonBackground.qml
+        content/NeonTempDial.qml
+        content/ControllerWindow.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -38,7 +46,7 @@ set_target_properties(appNeonCarInfotainment PROPERTIES
 )
 
 target_link_libraries(appNeonCarInfotainment
-    PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::Widgets
+    PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::Multimedia Qt6::Core
 )
 
 include(GNUInstallDirs)
