@@ -5,7 +5,7 @@ import NeonBackend 1.0
 
 Window {
     id: simWindow
-    width: 450; height: 600
+    width: 450; height: 700
     visible: true
     title: "SIM CONTROLLER"
     color: "#1e1e1e"
@@ -18,7 +18,7 @@ Window {
 
         ColumnLayout {
             width: parent.width
-            spacing: 25 // Tăng khoảng cách giữa các nhóm
+            spacing: 25
             anchors.margins: 30
 
             Text {

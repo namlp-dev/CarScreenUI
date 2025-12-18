@@ -47,7 +47,6 @@ Item {
             VehicleData.isAC = true
             VehicleData.fanSpeed = 3
             VehicleData.recircMode = 1
-            // root.toggleSync(true)
 
             if (VehicleData.tempLeft < 18 || VehicleData.tempLeft > 28) VehicleData.tempLeft = 22.0
         }
@@ -138,8 +137,6 @@ Item {
                     VehicleData.tempLeft = value;
                     if (VehicleData.isSync) {
                         VehicleData.tempRight = value
-                        VehicleData.heatRight = VehicleData.heatLeft
-                        VehicleData.coolRight = VehicleData.coolLeft
                     }
                 }
             }
@@ -192,12 +189,11 @@ Item {
                 onValueChanged: {
                     // [LOGIC CHẶN VÒNG LẶP]
                     // Chỉ khi giá trị thay đổi do NGƯỜI DÙNG xoay (khác với giá trị hệ thống đang lưu)
-                    // thì mới cập nhật ngược lại và phá Sync
+                    // thì mới cập nhật ngược lại và phá Sync                    
+                    if ((value - VehicleData.tempRight) != 0) {
+                        root.onPassengerTempChanged() // Phá vỡ Sync
+                    }
                     VehicleData.tempRight = value
-                    if (VehicleData.isSync)
-                        if (Math.abs(value - VehicleData.tempRight) > 0.1)
-                            root.onPassengerTempChanged() // Phá vỡ Sync
-
                 }
             }
             Row { anchors.horizontalCenter: parent.horizontalCenter; spacing: 20

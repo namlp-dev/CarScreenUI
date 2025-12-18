@@ -9,10 +9,6 @@ import QtMultimedia
 Item {
     id: root
 
-    // --- KHÔNG CÒN LOGIC RIÊNG Ở ĐÂY NỮA ---
-    // Chúng ta dùng trực tiếp: mainWindow.player, mainWindow.songList, v.v.
-
-    // Dialog chọn folder (Vẫn để ở đây vì hành động bắt nguồn từ trang này)
     FolderDialog {
         id: folderDialog
         title: "Select Music Folder"
@@ -99,11 +95,18 @@ Item {
                         }
                         color: "white"; font.pixelSize: Math.max(20, Math.min(28, leftPanel.width * 0.04)); font.bold: true; anchors.horizontalCenter: parent.horizontalCenter; elide: Text.ElideRight; width: leftPanel.width * 0.9; horizontalAlignment: Text.AlignHCenter
                     }
-                    Text { text: mainWindow.player.metaData.stringValue(MediaMetaData.Author) ? mainWindow.player.metaData.stringValue(MediaMetaData.Author) : "Unknown Artist"; color: "#888"; font.pixelSize: 18; anchors.horizontalCenter: parent.horizontalCenter }
+                    Text {
+                        text: {
+                            // mainWindow.player.metaData.stringValue(MediaMetaData.Author) ? mainWindow.player.metaData.stringValue(MediaMetaData.Author) : "Unknown Artist";
+                            var artist = mainWindow.player.metaData.stringValue(MediaMetaData.ContributingArtist)
+                            if (!artist) artist = mainWindow.player.metaData.stringValue(MediaMetaData.Author)
+                            return artist ? artist : "Unknown Artist"
+                        }
+                        color: "#888"; font.pixelSize: 18; anchors.horizontalCenter: parent.horizontalCenter
+                    }
                 }
 
                 // SEEK BAR
-                // SEEK BAR (ĐÃ FIX LỖI KẸT & TĂNG KÍCH THƯỚC CHẠM)
                 Item {
                     // Tăng chiều cao lên 40 để dễ chạm hơn
                     Layout.preferredWidth: leftPanel.width * 0.85
@@ -126,7 +129,6 @@ Item {
                         from: 0
                         to: mainWindow.player.duration
 
-                        // [FIX LỖI KẸT]: Dùng cú pháp này thay cho "value: ..."
                         // Ý nghĩa: Chỉ cập nhật slider theo nhạc khi tay bạn KHÔNG chạm vào nó
                         Binding on value {
                             value: mainWindow.player.position
@@ -217,7 +219,7 @@ Item {
             Rectangle { width: 1; anchors.left: parent.left; anchors.top: parent.top; anchors.bottom: parent.bottom; gradient: Gradient { orientation: Gradient.Vertical; GradientStop { position: 0.0; color: "transparent" } GradientStop { position: 0.5; color: "#333" } GradientStop { position: 1.0; color: "transparent" } } }
 
             Button { text: "📂"; anchors.right: parent.right; anchors.top: parent.top; anchors.margins: 10; width: 40; height: 40; background: Rectangle { color: "transparent" } contentItem: Text { text: parent.text; font.pixelSize: 20; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter } onClicked: folderDialog.open() }
-            Item { id: playlistHeader; height: 80; anchors.top: parent.top; anchors.left: parent.left; anchors.right: parent.right; anchors.margins: 20; Text { text: "PLAYLIST (" + mainWindow.songList.length + ")"; color: "#666"; font.bold: true; font.pixelSize: 14; anchors.left: parent.left; anchors.verticalCenter: parent.verticalCenter } }
+            Item { id: playlistHeader; height: 80; anchors.top: parent.top; anchors.left: parent.left; anchors.right: parent.right; anchors.margins: 10; Text { text: "PLAYLIST (" + mainWindow.songList.length + ")"; color: "#666"; font.bold: true; font.pixelSize: 14; anchors.left: parent.left; anchors.verticalCenter: parent.verticalCenter } }
 
             ListView {
                 id: playlistView
@@ -260,23 +262,52 @@ Item {
                     }
                     RowLayout {
                         anchors.fill: parent; anchors.leftMargin: 15; anchors.rightMargin: 15
-                        Item { width: 20; height: 20; visible: isActive; Row { spacing: 2; anchors.centerIn: parent; Repeater { model: 3; Rectangle { width: 3; height: 10 + Math.random()*10; color: "#00FFFF" } } } }
+                        Item {
+                            width: 20; height: 20
+                            visible: isActive // Chỉ hiện khi bài này đang hát
+
+                            Row {
+                                spacing: 2
+                                anchors.centerIn: parent
+                                anchors.verticalCenterOffset: 4 // Căn chỉnh lại chút cho đẹp
+
+                                Repeater {
+                                    model: 3
+                                    Rectangle {
+                                        width: 3
+                                        color: "#00FFFF"
+                                        // Chiều cao khởi điểm
+                                        height: 5
+                                        radius: 1.5
+
+                                        // Animation làm cho thanh nhảy lên xuống
+                                        SequentialAnimation on height {
+                                            running: isActive && mainWindow.player.playbackState === MediaPlayer.PlayingState
+                                            loops: Animation.Infinite
+                                            // Mỗi thanh nhảy với tốc độ khác nhau dựa trên index để ko bị đồng bộ
+                                            PropertyAnimation { to: 18; duration: 250 + (index * 50); easing.type: Easing.InOutQuad }
+                                            PropertyAnimation { to: 5;  duration: 250 + (index * 50); easing.type: Easing.InOutQuad }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         Text { text: index + 1; color: "#666"; visible: !isActive; font.bold: true; Layout.preferredWidth: 20 }
                         Column {
                             Layout.fillWidth: true;
-                            // Text { text: modelData.toString().split("/").pop().replace(".mp3", ""); color: isActive ? "#00FFFF" : "white"; font.bold: true; font.pixelSize: 14; elide: Text.ElideRight }
                             Text {
                                 text: modelData.toString().split("/").pop().replace(".mp3", "")
                                 color: isActive ? "#00FFFF" : "white"
                                 font.bold: true
                                 font.pixelSize: 14
 
-                                width: parent.width * 0.8
+                                width: parent.width * 0.9
                                 elide: Text.ElideRight
                                 wrapMode: Text.NoWrap
                             }
 
-                            Text { text: "Unknown Artist"; color: "#666"; font.pixelSize: 12 } }
+                            // Text { text: "Unknown Artist"; color: "#666"; font.pixelSize: 12 }
+                        }
                         Text {
                             // text: isActive ? mainWindow.formatTime(mainWindow.player.duration) : "--:--";
                             text: mainWindow.formatTime(mainWindow.player.duration);

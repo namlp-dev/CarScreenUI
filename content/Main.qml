@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import QtMultimedia
+import QtMultimedia // [QUAN TRỌNG]
 import NeonBackend 1.0
 import NeonUI
 
@@ -10,34 +10,58 @@ Window {
     visible: true
     title: "Neon Car Infotainment"
 
-    // --- [QUAN TRỌNG] CÔNG KHAI CÁC ĐỐI TƯỢNG RA NGOÀI ---
-    // Để MediaScreen và TopBar có thể gọi mainWindow.player, mainWindow.fileScanner
+    // Alias giữ nguyên
     property alias player: player
     property alias audioOut: audioOut
     property alias fileScanner: fileScanner
 
-    // --- GLOBAL MEDIA STATE ---
+    // Properties cũ giữ nguyên...
     property bool isMediaLoaded: false
     property int currentSongIndex: -1
     property var songList: []
 
     // Backend Scanner
-    FileScanner { id: fileScanner } // ID này là nội bộ, nhưng đã được expose qua alias ở trên
+    FileScanner { id: fileScanner }
+
+    // --- [MỚI] QUẢN LÝ THIẾT BỊ ÂM THANH ---
+    MediaDevices {
+        id: mediaDevices
+    }
+    // ---------------------------------------
 
     // Audio Engine
     MediaPlayer {
-        id: player // ID này là nội bộ
+        id: player
         audioOutput: audioOut
         autoPlay: true
+
+        // [TÙY CHỌN] Xử lý nếu xảy ra lỗi thiết bị thì thử play lại hoặc dừng an toàn
+        onErrorOccurred: {
+            console.log("Media Error: " + errorString)
+            if (error === MediaPlayer.ResourceError) {
+                // Thường lỗi thiết bị sẽ rơi vào đây, ta có thể stop để tránh crash
+                player.stop()
+            }
+        }
+
         onPlaybackStateChanged: {
             if (playbackState === MediaPlayer.StoppedState && position === duration && duration > 0) {
                 mainWindow.nextSong()
             }
         }
     }
-    AudioOutput { id: audioOut; volume: 0.7 }
 
-    // ... (Giữ nguyên các hàm nextSong, prevSong, formatTime)
+    AudioOutput {
+        id: audioOut
+        volume: 0.7
+
+        // --- [QUAN TRỌNG NHẤT] ---
+        // Luôn bind thiết bị đầu ra theo thiết bị mặc định của hệ thống
+        // Khi bạn cắm/rút tai nghe, 'defaultAudioOutput' thay đổi -> 'device' tự cập nhật theo
+        device: mediaDevices.defaultAudioOutput
+    }
+
+    // ... (Phần code Logic Next/Prev và UI bên dưới GIỮ NGUYÊN KHÔNG ĐỔI)
     function nextSong() {
         if (songList.length > 0) {
             currentSongIndex = (currentSongIndex + 1) % songList.length
@@ -60,7 +84,6 @@ Window {
         return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     }
 
-    // --- UI STRUCTURE ---
     NeonBackground { z: -100 }
 
     NavBar {
