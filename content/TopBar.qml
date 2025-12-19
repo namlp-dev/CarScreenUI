@@ -13,8 +13,96 @@ Item {
     property string currentDate: ""
     property string weatherData: "Loading..."
     Timer { interval: 1000; running: true; repeat: true; triggeredOnStart: true; onTriggered: { var date = new Date(); root.currentTime = Qt.formatDateTime(date, "hh:mm"); root.currentDate = Qt.formatDateTime(date, "dd/MM/yyyy") } }
-    Timer { interval: 900000; running: true; repeat: true; triggeredOnStart: true; onTriggered: fetchWeather() }
-    function fetchWeather() { var doc = new XMLHttpRequest(); doc.onreadystatechange = function() { if (doc.readyState === XMLHttpRequest.DONE && doc.status === 200) root.weatherData = doc.responseText.trim() }; doc.open("GET", "https://wttr.in/?format=3"); doc.send(); }
+    Timer { interval: 900000; running: true; repeat: true; triggeredOnStart: true; onTriggered: loadWeather() }
+
+    // HÀM KHỞI CHẠY (Gọi hàm này khi App bắt đầu)
+    function loadWeather() {
+        fetchLocation();
+    }
+
+    // BƯỚC 1: Lấy vị trí từ IP (Sử dụng GeoJS)
+    function fetchLocation() {
+        var doc = new XMLHttpRequest();
+        doc.onreadystatechange = function() {
+            if (doc.readyState === XMLHttpRequest.DONE) {
+                if (doc.status === 200) {
+                    try {
+                        var response = JSON.parse(doc.responseText);
+                        // GeoJS trả về: latitude, longitude, city, country
+                        if (response.latitude && response.longitude) {
+                            fetchWeather(response.latitude, response.longitude, response.city, response.country);
+                        } else {
+                            root.weatherData = "Could not detect coordinates";
+                        }
+                    } catch (e) {
+                        root.weatherData = "Error parsing location";
+                    }
+                } else {
+                    root.weatherData = "Location Check Failed";
+                }
+            }
+        }
+        // API này cực nhẹ, trả về JSON thông tin vị trí dựa trên IP
+        doc.open("GET", "https://get.geojs.io/v1/ip/geo.json");
+        doc.send();
+    }
+
+    // BƯỚC 2: Lấy thời tiết từ Open-Meteo dựa trên tọa độ
+    function fetchWeather(lat, lon, cityName, countryName) {
+        var doc = new XMLHttpRequest();
+        var url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&current_weather=true";
+
+        doc.onreadystatechange = function() {
+            if (doc.readyState === XMLHttpRequest.DONE) {
+                if (doc.status === 200) {
+                    console.log("Status:", doc.status, doc.statusText);
+                    console.log("Requested URL:", url);
+                    var response = JSON.parse(doc.responseText);
+                    var current = response.current_weather;
+                    var icon = getWeatherIcon(current.weathercode);
+                    var tempPrefix = current.temperature > 0 ? "+" : "";
+                    var formattedString = cityName + ", " + countryName + ": " + icon + " " + tempPrefix + current.temperature + "°C";
+
+                    root.weatherData = formattedString;
+
+                } else {
+                    // root.weatherData = "Weather API Error";
+                    console.log("Error Status:", doc.status, doc.statusText);
+                    console.log("Requested URL:", url);
+                    root.weatherData = "Weather API Error: " + doc.status;
+                }
+            }
+        }
+        doc.open("GET", url);
+        doc.send();
+    }
+
+    // Hàm chuyển đổi mã sang Icon
+    function getWeatherIcon(code) {
+        // 0-9: Clear, partly cloudy, overcast
+        if (code >= 0 && code <= 9) return "⛅";
+
+        // 40-49: Fog, mist, freezing fog
+        if (code >= 40 && code <= 49) return "🌫";
+
+        // 50-59: Drizzle (light rain)
+        if (code >= 50 && code <= 59) return "🌦";
+
+        // 60-69: Rain (moderate/heavy)
+        if (code >= 60 && code <= 69) return "🌧";
+
+        // 70-79: Snow
+        if (code >= 70 && code <= 79) return "❄️";
+
+        // 80-89: Showers (rain/snow showers)
+        if (code >= 80 && code <= 89) return "☔";
+
+        // 90-99: Thunderstorms
+        if (code >= 90 && code <= 99) return "⛈";
+
+        // Default icon for unknown codes or codes 10-39
+        return "🌡";
+    }
 
     Rectangle { anchors.fill: parent; color: "#050505"; opacity: 0.8 }
 

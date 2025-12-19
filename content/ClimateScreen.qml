@@ -229,7 +229,6 @@ Item {
         anchors.left: leftPanel.right; anchors.right: rightPanel.left; anchors.top: parent.top; anchors.bottom: bottomBar.top
 
         Column {
-            // [FIX ALIGN]: Căn giữa và set width cụ thể
             width: parent.width * 0.8
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 100
@@ -245,6 +244,7 @@ Item {
             Slider {
                 width: parent.width // Slider chiếm hết chiều rộng cột
                 from: 0; to: 5; stepSize: 1
+                snapMode: Slider.SnapAlways
                 value: VehicleData.fanSpeed
                 enabled: VehicleData.isAC; opacity: VehicleData.isAC ? 1.0 : 0.5
                 onMoved: VehicleData.fanSpeed = value
@@ -267,8 +267,6 @@ Item {
     }
 
     // --- COMPONENTS ---
-
-    // [THAY ĐỔI] EnergyConduit chỉ còn là Gradient tĩnh (Đã xóa Animation Rectangle)
     component EnergyConduit : Item {
         property bool isLeft: true
         property color flowColor: "#00FFFF"
