@@ -62,8 +62,14 @@ Item {
         Rectangle { width: parent.width * 0.8; height: 1; anchors.centerIn: parent; anchors.verticalCenterOffset: -20; color: "#00FFFF"; opacity: 0.5 }
         Rectangle { width: 1; height: 100; anchors.centerIn: parent; anchors.verticalCenterOffset: 30; color: "#00FFFF"; opacity: 0.5 }
         Shape { anchors.fill: parent
-            ShapePath { strokeColor: "#00FFFF"; strokeWidth: 1; fillColor: "transparent"; startX: parent.width * 0.3; startY: parent.height * 0.2; PathLine { x: parent.width * 0.2; y: parent.height * 0.3 } }
-            ShapePath { strokeColor: "#00FFFF"; strokeWidth: 1; fillColor: "transparent"; startX: parent.width * 0.7; startY: parent.height * 0.2; PathLine { x: parent.width * 0.8; y: parent.height * 0.3 } }
+            ShapePath {
+                strokeColor: "#00FFFF"; strokeWidth: 1; fillColor: "transparent";
+                startX: parent.width * 0.3; startY: parent.height * 0.2;
+                PathLine { x: parent.width * 0.2; y: parent.height * 0.3 } }
+            ShapePath {
+                strokeColor: "#00FFFF"; strokeWidth: 1; fillColor: "transparent";
+                startX: parent.width * 0.7; startY: parent.height * 0.2;
+                PathLine { x: parent.width * 0.8; y: parent.height * 0.3 } }
         }
     }
 

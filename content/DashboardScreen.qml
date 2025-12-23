@@ -266,7 +266,7 @@ Item {
     // Rear Left
     TireWidget {
         anchors.right: carContainer.left; anchors.rightMargin: 10
-        anchors.bottom: carContainer.bottom; anchors.bottomMargin: 70
+        anchors.bottom: carContainer.bottom; anchors.bottomMargin: 20
         label: "REAR LEFT"
         pressure: root.pressureRL
         isLeft: true
@@ -277,7 +277,7 @@ Item {
     // Rear Right
     TireWidget {
         anchors.left: carContainer.right; anchors.leftMargin: 10
-        anchors.bottom: carContainer.bottom; anchors.bottomMargin: 70
+        anchors.bottom: carContainer.bottom; anchors.bottomMargin: 20
         label: "REAR RIGHT"
         pressure: root.pressureRR
         isLeft: false
@@ -325,7 +325,7 @@ Item {
 
             Text {
                 text: widgetRoot.pressure.toFixed(1) + " PSI"
-                color: widgetRoot.isWarning ? "#FF3333" : "white" // Đỏ hoặc Trắng
+                color: widgetRoot.isWarning ? "#FF3333" : "#666" // Đỏ hoặc Trắng
                 font.pixelSize: 28; font.bold: true; font.family: "Arial"
                 horizontalAlignment: widgetRoot.isLeft ? Text.AlignRight : Text.AlignLeft
                 width: 110

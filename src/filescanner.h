@@ -2,7 +2,6 @@
 #define FILESCANNER_H
 
 #include <QObject>
-#include <QStringList>
 #include <QUrl>
 
 class FileScanner : public QObject
@@ -12,7 +11,7 @@ public:
     explicit FileScanner(QObject *parent = nullptr);
 
     // Hàm này sẽ được gọi từ QML
-    Q_INVOKABLE QStringList scanForMp3(const QUrl &folderUrl);
+    Q_INVOKABLE QStringList scanForMediaFiles(const QUrl &folderUrl);
 };
 
 #endif // FILESCANNER_H

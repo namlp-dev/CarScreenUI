@@ -3,36 +3,41 @@
 #include <QDirIterator>
 
 FileScanner::FileScanner(QObject *parent)
-    : QObject{parent}
+    : QObject(parent)
 {}
 
-QStringList FileScanner::scanForMp3(const QUrl &folderUrl)
+QStringList FileScanner::scanForMediaFiles(const QUrl &folderUrl)
 {
-    QStringList mp3Files;
+    QStringList mediaFiles;
 
-    // Chuyển đổi URL (file:///C:/Music) sang đường dẫn cục bộ (C:/Music)
+    // [BƯỚC QUAN TRỌNG NHẤT]: Chuyển URL (file://...) sang Local Path (C:/...)
+    // Code mới trước đó thiếu bước này nên không tìm thấy đường dẫn
     QString localPath = folderUrl.toLocalFile();
 
     if (localPath.isEmpty()) {
-        qWarning() << "Invalid folder path:" << folderUrl;
-        return mp3Files;
+        qWarning() << "Invalid folder path or not a local file:" << folderUrl;
+        return mediaFiles;
     }
 
-    qDebug() << "Scanning folder:" << localPath;
+    qDebug() << "Scanning local path:" << localPath;
 
-    // Bộ lọc chỉ lấy file .mp3
+    // Bộ lọc hỗ trợ cả Nhạc và Video
     QStringList filters;
-    filters << "*.mp3";
+    filters << "*.mp3" << "*.wav" << "*.mp4";
 
-    // Dùng Iterator để quét thư mục (bao gồm cả thư mục con nếu muốn, ở đây tôi quét cạn)
-    QDirIterator it(localPath, filters, QDir::Files, QDirIterator::NoIteratorFlags);
+    // Quét thư mục
+    QDirIterator it(localPath,
+                    filters,
+                    QDir::Files | QDir::NoDotAndDotDot,
+                    QDirIterator::Subdirectories);
 
     while (it.hasNext()) {
         QString filePath = it.next();
-        // Chuyển đường dẫn file thành URL để MediaPlayer hiểu (file:///...)
-        mp3Files.append(QUrl::fromLocalFile(filePath).toString());
+
+        // Chuyển ngược lại thành URL để QML MediaPlayer có thể phát được
+        mediaFiles << QUrl::fromLocalFile(filePath).toString();
     }
 
-    qDebug() << "Found" << mp3Files.count() << "files.";
-    return mp3Files;
+    qDebug() << "Found" << mediaFiles.count() << "files.";
+    return mediaFiles;
 }

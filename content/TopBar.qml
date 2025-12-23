@@ -23,6 +23,7 @@ Item {
     // BƯỚC 1: Lấy vị trí từ IP (Sử dụng GeoJS)
     function fetchLocation() {
         var doc = new XMLHttpRequest();
+        var url = "https://get.geojs.io/v1/ip/geo.json";
         doc.onreadystatechange = function() {
             if (doc.readyState === XMLHttpRequest.DONE) {
                 if (doc.status === 200) {
@@ -30,6 +31,7 @@ Item {
                         var response = JSON.parse(doc.responseText);
                         // GeoJS trả về: latitude, longitude, city, country
                         if (response.latitude && response.longitude) {
+                            console.log("Location Status:", url);
                             fetchWeather(response.latitude, response.longitude, response.city, response.country);
                         } else {
                             root.weatherData = "Could not detect coordinates";
@@ -43,7 +45,7 @@ Item {
             }
         }
         // API này cực nhẹ, trả về JSON thông tin vị trí dựa trên IP
-        doc.open("GET", "https://get.geojs.io/v1/ip/geo.json");
+        doc.open("GET", url);
         doc.send();
     }
 
@@ -55,14 +57,11 @@ Item {
         doc.onreadystatechange = function() {
             if (doc.readyState === XMLHttpRequest.DONE) {
                 if (doc.status === 200) {
-                    console.log("Status:", doc.status, doc.statusText);
-                    console.log("Requested URL:", url);
                     var response = JSON.parse(doc.responseText);
                     var current = response.current_weather;
                     var icon = getWeatherIcon(current.weathercode);
                     var tempPrefix = current.temperature > 0 ? "+" : "";
-                    var formattedString = cityName + ", " + countryName + ": " + icon + " " + tempPrefix + current.temperature + "°C";
-
+                    var formattedString = (cityName!=="undefined"?"Hanoi":cityName) + ", " + countryName + ": " + icon + " " + tempPrefix + current.temperature + "°C";
                     root.weatherData = formattedString;
 
                 } else {
@@ -140,20 +139,20 @@ Item {
             spacing: 20
 
             // Cụm nút Mini (Đưa lên trước Text cho tiện tay thao tác)
-            Row {
+            RowLayout {
                 spacing: 15
                 Layout.alignment: Qt.AlignVCenter
 
-                MiniBtn { iconPath: "M6 6h2v12H6zm3.5 6l8.5 6V6z"; onClicked: mainWindow.prevSong() }
+                MiniBtn { iconPath: "M6 6h2v12H6zm3.5 6l8.5 6V6z"; onClicked: mainWindow.prevSong(); Layout.alignment: Qt.AlignVCenter;}
                 MiniBtn {
                     iconPath: (mainWindow.player && mainWindow.player.playbackState === MediaPlayer.PlayingState) ? "M6 19h4V5H6v14zm8-14v14h4V5h-4z" : "M8 5v14l11-7z"
+                    Layout.alignment: Qt.AlignVCenter;
                     onClicked: if(mainWindow.player) { mainWindow.player.playbackState === MediaPlayer.PlayingState ? mainWindow.player.pause() : mainWindow.player.play() }
                 }
-                MiniBtn { iconPath: "M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"; onClicked: mainWindow.nextSong() }
+                MiniBtn { iconPath: "M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"; onClicked: mainWindow.nextSong(); Layout.alignment: Qt.AlignVCenter;}
             }
 
-            // Vạch ngăn nhỏ giữa nút và tên bài (Optional - cho đẹp)
-            Rectangle { width: 1; height: 16; color: "#333" }
+            Rectangle { width: 1; height: 16; color: "#333"; Layout.alignment: Qt.AlignVCenter }
 
             // Tên bài hát
             Text {
@@ -161,7 +160,7 @@ Item {
                      if (!mainWindow.player || !mainWindow.player.metaData) return ""
                      var title = mainWindow.player.metaData.stringValue(MediaMetaData.Title)
                      var sourceStr = mainWindow.player.source.toString()
-                     var fileName = sourceStr ? sourceStr.split("/").pop().replace(".mp3", "") : ""
+                     var fileName = sourceStr ? sourceStr.split("/").pop().replace(/\.[^.]+$/, "") : ""
                      return title ? title : fileName
                 }
                 color: "#00FFFF"; font.bold: true; font.pixelSize: 14
@@ -170,6 +169,7 @@ Item {
                 elide: Text.ElideRight
                 // [THAY ĐỔI] Căn trái để text chạy ra xa khỏi logo
                 horizontalAlignment: Text.AlignLeft
+                Layout.alignment: Qt.AlignVCenter
             }
         }
     }
@@ -195,7 +195,8 @@ Item {
 
         property string iconPath: ""
         signal clicked()
-
+        implicitWidth: 24
+        implicitHeight: 24
         width: 24; height: 24
 
         // Vùng tương tác chuột
@@ -208,8 +209,9 @@ Item {
 
         // Vẽ Icon
         Shape {
-            anchors.centerIn: parent
-            width: 14; height: 14
+            // anchors.centerIn: parent
+            // width: 14; height: 14
+            anchors.fill: parent
 
             ShapePath {
                 fillColor: "white"

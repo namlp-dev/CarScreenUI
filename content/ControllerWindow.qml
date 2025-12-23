@@ -146,14 +146,14 @@ Window {
                     spacing: 30
                     CheckBox {
                         checked: VehicleData.leftSignal
-                        onCheckedChanged: VehicleData.leftSignal = checked
-                        contentItem: Text { text: parent.text; color: checked ? "#00FF00" : "white"; font.bold: true; leftPadding: 10; verticalAlignment: Text.AlignVCenter }
+                        onCheckedChanged: VehicleData.leftSignal = this.checked
+                        contentItem: Text { text: parent.text; color: this.checked ? "#00FF00" : "white"; font.bold: true; leftPadding: 10; verticalAlignment: Text.AlignVCenter }
                     }
                     Text {text: "◀ Left"; color: "white";}
                     CheckBox {
                         checked: VehicleData.rightSignal
-                        onCheckedChanged: VehicleData.rightSignal = checked
-                        contentItem: Text { text: parent.text; color: checked ? "#00FF00" : "white"; font.bold: true; leftPadding: 10; verticalAlignment: Text.AlignVCenter }
+                        onCheckedChanged: VehicleData.rightSignal = this.checked
+                        contentItem: Text { text: parent.text; color: this.checked ? "#00FF00" : "white"; font.bold: true; leftPadding: 10; verticalAlignment: Text.AlignVCenter }
                     }
                     Text {text: "Right ▶"; color: "white";}
                 }
