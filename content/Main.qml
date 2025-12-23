@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import QtMultimedia // [QUAN TRỌNG]
+import QtMultimedia
 import NeonBackend 1.0
 import NeonUI
 
@@ -10,43 +10,33 @@ Window {
     visible: true
     title: "Neon Car Infotainment"
 
-    // Alias giữ nguyên
+    // --- [MỚI] PROPERTIES QUẢN LÝ LOGIC ---
     property alias player: player
     property alias audioOut: audioOut
     property alias fileScanner: fileScanner
+    // property alias duration: MediaPlayer.duration
 
-    // Properties cũ giữ nguyên...
     property bool isMediaLoaded: false
     property int currentSongIndex: -1
     property var songList: []
 
-    // Backend Scanner
+    // Biến lưu trạng thái (như đã bàn ở bước trước)
+    property string savedMediaType: "music"
+
+    // [FIX 1] Biến này để MediaScreen báo cho Main biết đang lọc theo kiểu gì
+    property string activeFilterMode: "music" // "music" hoặc "video"
+
     FileScanner { id: fileScanner }
+    MediaDevices { id: mediaDevices }
 
-    // --- [MỚI] QUẢN LÝ THIẾT BỊ ÂM THANH ---
-    MediaDevices {
-        id: mediaDevices
-    }
-    // ---------------------------------------
-
-    // Audio Engine
     MediaPlayer {
         id: player
         audioOutput: audioOut
         autoPlay: true
-
-        // [TÙY CHỌN] Xử lý nếu xảy ra lỗi thiết bị thì thử play lại hoặc dừng an toàn
-        onErrorOccurred: {
-            console.log("Media Error: " + errorString)
-            if (error === MediaPlayer.ResourceError) {
-                // Thường lỗi thiết bị sẽ rơi vào đây, ta có thể stop để tránh crash
-                player.stop()
-            }
-        }
-
+        onErrorOccurred: { console.log("Media Error: " + errorString); if (error === MediaPlayer.ResourceError) player.stop() }
         onPlaybackStateChanged: {
             if (playbackState === MediaPlayer.StoppedState && position === duration && duration > 0) {
-                mainWindow.nextSong()
+                mainWindow.nextSong() // Tự chuyển bài khi hết
             }
         }
     }
@@ -54,28 +44,59 @@ Window {
     AudioOutput {
         id: audioOut
         volume: 0.7
-
-        // --- [QUAN TRỌNG NHẤT] ---
-        // Luôn bind thiết bị đầu ra theo thiết bị mặc định của hệ thống
-        // Khi bạn cắm/rút tai nghe, 'defaultAudioOutput' thay đổi -> 'device' tự cập nhật theo
         device: mediaDevices.defaultAudioOutput
     }
 
-    // ... (Phần code Logic Next/Prev và UI bên dưới GIỮ NGUYÊN KHÔNG ĐỔI)
+    // --- [FIX 1] LOGIC NEXT/PREV THÔNG MINH ---
+    // Hàm kiểm tra xem file có khớp với chế độ hiện tại không
+    function isFileValidForMode(filePath) {
+        var isVid = filePath.toString().toLowerCase().endsWith(".mp4")
+        if (activeFilterMode === "video") return isVid
+        else return !isVid // Music mode (mp3, wav)
+    }
+
     function nextSong() {
-        if (songList.length > 0) {
-            currentSongIndex = (currentSongIndex + 1) % songList.length
+        if (songList.length === 0) return
+
+        var nextIndex = currentSongIndex
+        var loopCount = 0
+
+        // Vòng lặp tìm bài tiếp theo HỢP LỆ
+        do {
+            nextIndex = (nextIndex + 1) % songList.length
+            loopCount++
+            // Nếu tìm thấy bài hợp lệ thì dừng
+            if (isFileValidForMode(songList[nextIndex])) break
+        } while (loopCount < songList.length)
+
+        // Chỉ play nếu tìm thấy
+        if (isFileValidForMode(songList[nextIndex])) {
+            currentSongIndex = nextIndex
             player.source = songList[currentSongIndex]
             player.play()
         }
     }
+
     function prevSong() {
-        if (songList.length > 0) {
-            currentSongIndex = (currentSongIndex - 1 + songList.length) % songList.length
+        if (songList.length === 0) return
+
+        var prevIndex = currentSongIndex
+        var loopCount = 0
+
+        // Vòng lặp lùi
+        do {
+            prevIndex = (prevIndex - 1 + songList.length) % songList.length
+            loopCount++
+            if (isFileValidForMode(songList[prevIndex])) break
+        } while (loopCount < songList.length)
+
+        if (isFileValidForMode(songList[prevIndex])) {
+            currentSongIndex = prevIndex
             player.source = songList[currentSongIndex]
             player.play()
         }
     }
+
     function formatTime(milliseconds) {
         if (milliseconds <= 0) return "00:00";
         var totalSeconds = Math.floor(milliseconds / 1000);
@@ -84,6 +105,7 @@ Window {
         return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     }
 
+    // --- UI STRUCTURE ---
     NeonBackground { z: -100 }
 
     NavBar {
