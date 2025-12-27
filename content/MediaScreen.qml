@@ -59,6 +59,7 @@ Item {
             when: root.currentMediaType === "video" && root.isFullscreen
             PropertyChanges { target: leftPanel; x: 0; y: 0; width: root.width; height: root.height; z: 100 }
             PropertyChanges { target: mediaContainer; width: root.width; height: root.height }
+            PropertyChanges { target: albumArtImg; visible: false }
             PropertyChanges { target: rightPanel; visible: false; opacity: 0 }
             PropertyChanges { target: mainPlayerInterface; anchors.margins: 0}
 
@@ -159,11 +160,13 @@ Item {
                             Image {
                                 id: albumArtImg
                                 anchors.fill: parent; fillMode: Image.PreserveAspectCrop
-                                source: mainWindow.player.metaData.coverArtUrl ? mainWindow.player.metaData.coverArtUrl : ""
+
+
+                                source: mainWindow.player.metaData.coverArtImage ? mainWindow.player.metaData.coverArtImage : ""
                             }
                             Text {
                                 text: "♫"; color: "#00FFFF"; font.pixelSize: 100; anchors.centerIn: parent; opacity: 0.5;
-                                visible: albumArtImg.visible && !mainWindow.player.metaData.coverArtUrl
+                                visible: albumArtImg.visible && !mainWindow.player.metaData.coverArtImage
                             }
                         }
                         layer.enabled: !root.isFullscreen
